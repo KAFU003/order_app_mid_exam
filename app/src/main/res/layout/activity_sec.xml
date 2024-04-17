@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cb1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecActivity">
+
+    <TextView
+        android:id="@+id/txtMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="主食"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDrink2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="飲料"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/txtMain2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMain2" />
+
+    <TextView
+        android:id="@+id/txtDessert2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="點心"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/txtMain2"
+        app:layout_constraintTop_toBottomOf="@+id/txtDrink2" />
+
+    <RadioGroup
+        android:id="@+id/rdgpMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/txtMain2"
+        app:layout_constraintTop_toTopOf="@+id/txtMain2">
+
+        <RadioButton
+            android:id="@+id/rdbtMainA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A餐 $50"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/rdbtMainB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B餐 $60"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/rdbtMainC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="C餐 $70"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rdgpDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/txtDrink2"
+        app:layout_constraintTop_toTopOf="@+id/txtDrink2">
+
+        <RadioButton
+            android:id="@+id/rdbtMilktea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="奶茶 $30"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/rdbtBlacktea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="紅茶 $25"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbChocoCake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="巧克力蛋糕 $50"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/txtDessert2"
+        app:layout_constraintTop_toTopOf="@+id/txtDessert2" />
+
+    <CheckBox
+        android:id="@+id/cbCheeseCake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="起司蛋糕 $45"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/txtDessert2"
+        app:layout_constraintTop_toTopOf="@+id/txtDessert2" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="124dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="652dp"
+        android:text="確認"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
