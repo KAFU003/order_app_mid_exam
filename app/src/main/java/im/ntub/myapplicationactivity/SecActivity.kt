@@ -8,16 +8,15 @@ import androidx.appcompat.app.AlertDialog
 
 class SecActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySecBinding
-    private var total = 0  // 移到這裡以便全域使用
+    private var total = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 確認按鈕點擊監聽器
         binding.btnConfirm.setOnClickListener {
-            // 這裡不需要再進行 total += ... 的操作了，因為已經在選擇監聽器中進行了加總
+
             val main = findViewById<RadioButton>(binding.rdgpMain.checkedRadioButtonId)?.text?.toString() ?: ""
             val drink = findViewById<RadioButton>(binding.rdgpDrink.checkedRadioButtonId)?.text?.toString() ?: ""
             val result_main = "主食: $main"
@@ -31,10 +30,10 @@ class SecActivity : AppCompatActivity() {
                     total += 50
                 }
                 "B餐 $60" -> {
-                    total += 50
+                    total += 60
                 }
                 "C餐 $70" -> {
-                    total += 50
+                    total += 70
                 }
                 else -> {
                     total += 0
@@ -71,7 +70,6 @@ class SecActivity : AppCompatActivity() {
 
             val result_total = "總金額: $total"
 
-            // 將結果放入 Intent 並設置結果
             val alertDialogBuilder = AlertDialog.Builder(this)
             alertDialogBuilder
                 .setTitle("確認訂單")
@@ -88,6 +86,7 @@ class SecActivity : AppCompatActivity() {
                 }
                 .setNegativeButton("否") { dialog, _ ->
                 dialog.dismiss()
+                    total = 0
                 }
                 .create()
                 .show()
